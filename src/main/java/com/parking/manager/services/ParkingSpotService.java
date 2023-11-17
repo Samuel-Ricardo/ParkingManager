@@ -1,5 +1,6 @@
 package com.parking.manager.services;
 
+import com.parking.manager.dto.ParkingSpotDTO;
 import com.parking.manager.models.ParkingSpotModel;
 import com.parking.manager.repositories.ParkingSpotRepository;
 import jakarta.transaction.Transactional;
@@ -34,6 +35,11 @@ public class ParkingSpotService {
 
      public boolean existsByApartmentAndBlock(String apartment, String block) {
         return repository.existsByApartmentAndBlock(apartment, block);
+     }
+
+     @Transactional
+     public boolean alreadyExists (ParkingSpotDTO DTO) {
+        return this.existsByLicensePlate(DTO.licensePlate()) && this.existsByParkingSpotNumber(DTO.parkingSpotNumber()) && this.existsByApartmentAndBlock(DTO.apartment(), DTO.block());
      }
 
      public Page<ParkingSpotModel> findAll(Pageable pageable) {
