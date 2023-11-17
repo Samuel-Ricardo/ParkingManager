@@ -23,4 +23,8 @@ public class ParkingSpotService {
          return repository.existsByLicensePlate(licensePlate);
      }
 
+     public boolean existsByParkingSpotNumber(String parkingSpotNumber) {
+        return repository.existsByParkingSpotNumber(parkingSpotNumber);
+     }
+
 }
