@@ -40,6 +40,12 @@ public class ParkingSpotController {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.save(spot))
     }
 
-
+    @GetMapping
+    public ResponseEntity<Page<ParkingSpotModel>> getAll(
+            @PageableDefault(page = 0, size = 10, sort = "id", direction = Sort.Direction.ASC)
+            Pageable pageable
+    ) {
+        return ResponseEntity.status(HttpStatus.OK).body(service.findAll(pageable));
+    }
 
 }
