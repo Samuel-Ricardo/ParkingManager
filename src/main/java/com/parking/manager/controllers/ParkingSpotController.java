@@ -73,4 +73,21 @@ public class ParkingSpotController {
         return  ResponseEntity.status(HttpStatus.OK).body("Parking Spot deleted successfully.");
     }
 
+    public ResponseEntity<Object> update(
+            @PathVariable(value = "id") UUID id,
+            @RequestBody @Valid ParkingSpotDTO DTO
+    ) {
+
+        var oSpot = service.findById(id);
+        if(oSpot.isEmpty()) return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Parking Spot not found.")
+
+        var model = new ParkingSpotModel();
+        BeanUtils.copyProperties(DTO, model);
+
+        model.setId(oSpot.get().getId());
+        model.setRegistrationDate(oSpot.get().getRegistrationDate());
+
+        return ResponseEntity.status(HttpStatus.OK).body(service.save(model));
+    }
+
 }
