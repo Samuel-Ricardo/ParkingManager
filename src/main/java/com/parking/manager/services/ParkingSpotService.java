@@ -7,6 +7,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+import java.util.UUID;
+
 @Service
 public class ParkingSpotService {
 
@@ -35,6 +38,10 @@ public class ParkingSpotService {
 
      public Page<ParkingSpotModel> findAll(Pageable pageable) {
         return repository.findAll(pageable);
+     }
+
+     public Optional<ParkingSpotModel> findById(UUID id) {
+        return repository.findById(id);
      }
 
 }
