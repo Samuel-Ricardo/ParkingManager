@@ -44,4 +44,9 @@ public class ParkingSpotService {
         return repository.findById(id);
      }
 
+     @Transactional
+     public void delete(ParkingSpotModel spot) {
+        repository.delete(spot);
+     }
+
 }
