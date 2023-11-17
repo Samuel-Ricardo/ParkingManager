@@ -27,4 +27,8 @@ public class ParkingSpotService {
         return repository.existsByParkingSpotNumber(parkingSpotNumber);
      }
 
+     public boolean existsByApartmentAndBlock(String apartment, String block) {
+        return repository.existsByApartmentAndBlock(apartment, block);
+     }
+
 }
