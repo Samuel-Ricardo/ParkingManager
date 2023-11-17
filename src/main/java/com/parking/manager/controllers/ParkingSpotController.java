@@ -39,7 +39,7 @@ public class ParkingSpotController {
         BeanUtils.copyProperties(DTO, spot);
         spot.setRegistrationDate(LocalDateTime.now(ZoneId.of("UTC")));
 
-        return ResponseEntity.status(HttpStatus.CREATED).body(service.save(spot))
+        return ResponseEntity.status(HttpStatus.CREATED).body(service.save(spot));
     }
 
     @GetMapping
@@ -67,7 +67,7 @@ public class ParkingSpotController {
             UUID id
     ) {
         var oSpot = service.findById(id);
-        if (oSpot.isEmpty()) return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Parking Spot not found.")
+        if (oSpot.isEmpty()) return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Parking Spot not found.");
 
         service.delete(oSpot.get());
         return  ResponseEntity.status(HttpStatus.OK).body("Parking Spot deleted successfully.");
@@ -79,7 +79,7 @@ public class ParkingSpotController {
     ) {
 
         var oSpot = service.findById(id);
-        if(oSpot.isEmpty()) return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Parking Spot not found.")
+        if(oSpot.isEmpty()) return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Parking Spot not found.");
 
         var model = new ParkingSpotModel();
         BeanUtils.copyProperties(DTO, model);
