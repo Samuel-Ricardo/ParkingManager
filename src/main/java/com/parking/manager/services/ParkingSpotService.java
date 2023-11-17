@@ -14,6 +14,9 @@ public class ParkingSpotService {
         this.repository = repository;
     }
 
-    
+    @Transactional
+    public ParkingSpotModel save(ParkingSpotModel spot) {
+        return repository.save(spot);
+    }
 
 }
