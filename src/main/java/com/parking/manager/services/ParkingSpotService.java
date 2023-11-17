@@ -13,7 +13,7 @@ import java.util.UUID;
 @Service
 public class ParkingSpotService {
 
-    final ParkingSpotRepository repository;
+    private final ParkingSpotRepository repository;
 
     public ParkingSpotService(ParkingSpotRepository repository) {
         this.repository = repository;
