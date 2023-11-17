@@ -4,5 +4,3 @@ WORKDIR /parking_manager
 COPY . .
 
 RUN mvn clean install
-
-CMD mvn spring-boot:run

@@ -3,14 +3,14 @@ version: "3.8"
 services:
 
   api:
-    build: .
     depends_on:
       - postgres
+    build: .
     restart: on-failure
+    command: ["mvn", "spring-boot:run"]
     ports:
       - "8081:8080"
-    external_links:
-      - "host.docker.internal"
+
 
   postgres:
     image: postgres
@@ -23,8 +23,7 @@ services:
       - .docker/postgres:/data/postgres
     ports:
       - "5432:5432"
-    external_links:
-      - "host.docker.internal"
+
 
   pgadmin:
     image: dpage/pgadmin4
@@ -39,5 +38,3 @@ services:
       - .docker/pgadmin:/database/admin/pgadmin
     ports:
       - 5050:80
-    external_links:
-      - "host.docker.internal"
