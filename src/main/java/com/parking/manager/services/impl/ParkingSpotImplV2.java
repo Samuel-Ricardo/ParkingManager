@@ -1,5 +1,6 @@
 package com.parking.manager.services.impl;
 
+import com.parking.manager.dto.ParkingSpotDTO;
 import com.parking.manager.models.ParkingSpotModel;
 import com.parking.manager.services.ParkingSpotService;
 import org.springframework.data.domain.Page;
@@ -42,7 +43,10 @@ public class ParkingSpotImplV2 implements ParkingSpotService {
     }
 
     @Override
-    public void delete(ParkingSpotModel parkingSpotModel) {
+    public void delete(ParkingSpotModel parkingSpotModel) {}
 
+    @Override
+    public boolean alreadyExists (ParkingSpotDTO DTO) {
+        return false;
     }
 }

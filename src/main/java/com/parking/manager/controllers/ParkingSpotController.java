@@ -1,11 +1,17 @@
 package com.parking.manager.controllers;
 
+import com.parking.manager.AppProperties;
+import com.parking.manager.MyBean;
 import com.parking.manager.dto.ParkingSpotDTO;
 import com.parking.manager.models.ParkingSpotModel;
+import com.parking.manager.services.ParkingSpotService;
 import com.parking.manager.services.impl.ParkingSpotServiceImpl;
 import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.Scope;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -22,9 +28,38 @@ import java.util.UUID;
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/parking/spots")
+@Scope("singleton")
+@PropertySource("classpath:custom.properties")
 public class ParkingSpotController {
     @Autowired
-    private ParkingSpotServiceImpl service;
+//    @Qualifier("parkingSpotServiceImpl")
+    private ParkingSpotService service;
+
+    @Autowired
+    private MyBean myBean;
+
+//    @Autowired
+//    private LazyBean lazyBean;
+
+    @Autowired
+    private AppProperties appProperties;
+
+    @Value("${app.name}")
+    private String appName;
+
+    @Value("${app.port}")
+    private String appPort;
+
+    @Value("${app.host}")
+    private String appHost;
+
+    @Value("${message}")
+    private String message;
+
+    public ParkingSpotController() {
+        System.out.println("ParkingSpotController created!!!");
+    }
+
 
     @PostMapping
     public ResponseEntity<Object> save(
@@ -43,10 +78,22 @@ public class ParkingSpotController {
     }
 
     @GetMapping
+    //    @RequestMapping(value = "/parking-spot", method = RequestMethod.GET)
     public ResponseEntity<Page<ParkingSpotModel>> getAll(
             @PageableDefault(page = 0, size = 10, sort = "id", direction = Sort.Direction.ASC)
             Pageable pageable
     ) {
+
+//        System.out.println("App Name: " + appName);
+//        System.out.println("App Port: " + appPort);
+//        System.out.println("App Host: " + appHost);
+//        myBean.method();
+        System.out.println("App Name: " + appProperties.getName());
+        System.out.println("App Port: " + appProperties.getPort());
+        System.out.println("App Host: " + appProperties.getHost());
+
+        System.out.println(message);
+
         return ResponseEntity.status(HttpStatus.OK).body(service.findAll(pageable));
     }
 

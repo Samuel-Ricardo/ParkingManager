@@ -1,5 +1,6 @@
 package com.parking.manager.services;
 
+import com.parking.manager.dto.ParkingSpotDTO;
 import com.parking.manager.models.ParkingSpotModel;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -17,4 +18,5 @@ public interface ParkingSpotService {
     Optional<ParkingSpotModel> findById(UUID id);
     void delete(ParkingSpotModel parkingSpotModel);
 
+    boolean alreadyExists (ParkingSpotDTO DTO);
 }
