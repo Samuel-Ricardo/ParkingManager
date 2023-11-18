@@ -4,10 +4,12 @@ import com.parking.manager.models.ParkingSpotModel;
 import com.parking.manager.services.ParkingSpotService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 import java.util.UUID;
 
+@Service
 public class ParkingSpotImplV2 implements ParkingSpotService {
     @Override
     public ParkingSpotModel save(ParkingSpotModel parkingSpotModel) {

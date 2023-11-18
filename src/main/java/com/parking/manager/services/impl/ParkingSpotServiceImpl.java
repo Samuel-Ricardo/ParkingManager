@@ -5,6 +5,7 @@ import com.parking.manager.models.ParkingSpotModel;
 import com.parking.manager.repositories.ParkingSpotRepository;
 import com.parking.manager.services.ParkingSpotService;
 import jakarta.transaction.Transactional;
+import org.springframework.context.annotation.Primary;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 import java.util.UUID;
 
+@Primary
 @Service
 public class ParkingSpotServiceImpl implements ParkingSpotService {
 
