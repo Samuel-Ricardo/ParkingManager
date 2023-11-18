@@ -64,4 +64,28 @@ public class UserModel implements UserDetails, Serializable {
     public boolean isEnabled() {
         return true;
     }
+
+    public UUID getUserId() {
+        return userId;
+    }
+
+    public void setUserId(UUID userId) {
+        this.userId = userId;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public List<RoleModel> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<RoleModel> roles) {
+        this.roles = roles;
+    }
 }
