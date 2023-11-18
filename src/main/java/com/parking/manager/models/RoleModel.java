@@ -25,4 +25,20 @@ public class RoleModel implements GrantedAuthority, Serializable {
     public String getAuthority() {
         return this.roleName.toString();
     }
+
+    public UUID getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(UUID roleId) {
+        this.roleId = roleId;
+    }
+
+    public RoleName getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(RoleName roleName) {
+        this.roleName = roleName;
+    }
 }
