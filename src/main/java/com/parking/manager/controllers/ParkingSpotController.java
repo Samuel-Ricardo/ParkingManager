@@ -2,7 +2,7 @@ package com.parking.manager.controllers;
 
 import com.parking.manager.dto.ParkingSpotDTO;
 import com.parking.manager.models.ParkingSpotModel;
-import com.parking.manager.services.ParkingSpotService;
+import com.parking.manager.services.impl.ParkingSpotServiceImpl;
 import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ import java.util.UUID;
 @RequestMapping("/parking/spots")
 public class ParkingSpotController {
     @Autowired
-    private ParkingSpotService service;
+    private ParkingSpotServiceImpl service;
 
     @PostMapping
     public ResponseEntity<Object> save(
