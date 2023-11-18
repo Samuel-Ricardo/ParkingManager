@@ -9,6 +9,8 @@ services:
     restart: on-failure
     ports:
       - "8081:8080"
+    volumes:
+      - .:/parking_manager
 
   postgres:
     image: postgres
