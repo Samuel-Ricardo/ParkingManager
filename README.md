@@ -12,17 +12,15 @@
   Application developed with the purpose of studying the Spring Framework Ecosystem based on <a href="https://www.youtube.com/watch?v=wlYvA2b1BWI&pp=ygUNbWljaGVsaSBicml0bw%3D%3D" >@Michelle Brito<a> class
 </h4>
 
-#
-
 <p align="center">
   |&nbsp;&nbsp;
   <a style="color: #8a4af3;" href="#project">Overview</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a style="color: #8a4af3;" href="#techs">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a style="color: #8a4af3;" href="#app">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a style="color: #8a4af3;" href="#routes">Routes</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a style="color: #8a4af3;" href="#run-project">Run</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
   <a style="color: #8a4af3;" href="#author">Author</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
-
-#
 
 #
 
@@ -56,4 +54,27 @@
 
 <h2 id="techs">
   :building_construction: | Technologies and Concepts Studied:
+</h2>
+
+> <a href='https://spring.io/'> <img width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" /> </a>
+
+- Spring Boot
+- Spring Security
+- PostgreSQL
+- Docker
+- Maven
+- @Annotations
+- REST
+- Validation
+- Lombok
+- Environment
+
+> Among Others...
+
+<br>
+
+#
+
+<h2 id="app">
+  💻 | Application:
 </h2>
