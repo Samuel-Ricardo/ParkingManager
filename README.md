@@ -25,3 +25,35 @@
 #
 
 #
+
+<h1 align="center">
+  
+  <a href="https://github.com/Samuel-Ricardo">
+    <img src="https://img.shields.io/static/v1?label=&message=Samuel%20Ricardo&color=black&style=for-the-badge&logo=GITHUB"/>
+  </a>
+
+  <a herf="https://www.instagram.com/samuel_ricardo.ex/">
+    <img src='https://img.shields.io/static/v1?label=&message=Samuel.ex&color=black&style=for-the-badge&logo=instagram'/> 
+  </a>
+
+  <a herf='https://www.linkedin.com/in/samuel-ricardo/'>
+    <img src='https://img.shields.io/static/v1?label=&message=Samuel%20Ricardo&color=black&style=for-the-badge&logo=LinkedIn'/> 
+  </a>
+
+</h1>
+
+<br>
+
+<p id="project"/>
+
+<h2>  | :artificial_satellite: About:  </h2>
+
+<p>
+    API Developed to explore the features of Spring Framework, the mains annotations and Spring Security using PostgreSQL, is a REST CRUD  to manage parking spots, build with docker containers tecnolgies.
+</p>
+
+<br>
+
+<h2 id="techs">
+  :building_construction: | Technologies and Concepts Studied:
+</h2>
