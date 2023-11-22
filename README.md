@@ -68,6 +68,7 @@
 - Validation
 - Lombok
 - Environment
+- Pagination
 
 > Among Others...
 
@@ -75,6 +76,23 @@
 
 #
 
+
 <h2 id="app">
   💻 | Application:
 </h2>
+
+<img src="https://github.com/Samuel-Ricardo/ParkingManager/assets/63983021/b6545ecd-2b25-4f63-824c-ad804269f36f"/>
+
+#
+
+<img src="https://github.com/Samuel-Ricardo/ParkingManager/assets/63983021/b7ee7462-f487-4581-a6c8-cce35fb945b3"/>
+
+#
+
+<img src="https://github.com/Samuel-Ricardo/ParkingManager/assets/63983021/6e2cb5b4-7021-4987-b378-ce7c816d18c4"/>
+
+#
+
+References:
+- [Spring Security](https://youtu.be/t6prPki7daU)  | Michelli Brito
+- [Spring @Annotations](https://youtu.be/Pd5tr483No0)  | Michelli Brito
